@@ -1,0 +1,7 @@
+<material name="test">
+    <shader src="Data/Shaders/test.shader"/>
+    <textures>
+        <diffuse src="Data/Images/tifa.webp"/>
+        <!--<diffuse src="Data/Images/test.webp"/>-->
+    </textures>
+</material>
