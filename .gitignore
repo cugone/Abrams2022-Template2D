@@ -22,12 +22,14 @@ desktop.ini
 [Rr]elease/
 [Rr]eleases/
 Temporary/
+Run_*/*.exe
 x64/
 x86/
 bld/
 [Bb]in/
 [Oo]bj/
 [Ll]og/
+[Cc]onfig/
 
 # Visual Studio 2015/2017 cache/options directory
 .vs/
@@ -323,4 +325,3 @@ ASALocalRun/
 
 # MSBuild Binary and Structured Log
 *.binlog
-*.exe
