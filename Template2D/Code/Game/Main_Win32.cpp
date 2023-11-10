@@ -1,5 +1,3 @@
-#include <string>
-
 #include "Engine/Core/EngineBase.hpp"
 #include "Engine/Core/StringUtils.hpp"
 
