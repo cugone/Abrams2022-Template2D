@@ -5,17 +5,20 @@
 
 #include "Game/Game.hpp"
 
+#include <string>
+
 #pragma warning(push)
 #pragma warning(disable: 28251)
 
 int WINAPI wWinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, PWSTR pCmdLine, int nCmdShow);
 
 int WINAPI wWinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, PWSTR pCmdLine, int nCmdShow) {
+    using namespace std::literals::string_literals;
     UNUSED(hInstance);
     UNUSED(hPrevInstance);
     UNUSED(nCmdShow);
-    auto cmdString = StringUtils::ConvertUnicodeToMultiByte(std::wstring(pCmdLine ? pCmdLine : L""));
-    Engine<Game>::Initialize("Abrams 2022 2D Template", cmdString);
+    UNUSED(pCmdLine);
+    Engine<Game>::Initialize("Abrams 2022 2D Template"s);
     Engine<Game>::Run();
     Engine<Game>::Shutdown();
 }
