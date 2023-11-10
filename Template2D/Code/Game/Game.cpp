@@ -46,11 +46,11 @@ void Game::Render() const noexcept {
     //World View
     g_theRenderer->SetMaterial(g_theRenderer->GetMaterial("__2D"));
     {
-        const auto S = Matrix4::I;
+        const auto S = Matrix4::CreateScaleMatrix(Vector2::One);
         const auto R = Matrix4::I;
         const auto T = Matrix4::I;
         const auto M = Matrix4::MakeSRT(S, R, T);
-        g_theRenderer->DrawQuad2D(Vector2::Zero, Vector2::One * 0.5f, Rgba::ForestGreen);
+        g_theRenderer->DrawQuad2D(M, Rgba::ForestGreen);
     }
 
     // HUD View
