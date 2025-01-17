@@ -55,7 +55,7 @@ void Game::Render() const noexcept {
 
     // HUD View
     {
-        const auto ui_view_height = static_cast<float>(GetSettings().GetWindowHeight());
+        const auto ui_view_height = static_cast<float>(GetSettings()->GetWindowHeight());
         const auto ui_view_width = ui_view_height * _ui_camera2D.GetAspectRatio();
         const auto ui_view_extents = Vector2{ui_view_width, ui_view_height};
         const auto ui_view_half_extents = ui_view_extents * 0.5f;
@@ -82,11 +82,11 @@ void Game::EndFrame() noexcept {
     /* DO NOTHING */
 }
 
-const GameSettings& Game::GetSettings() const noexcept {
+const GameSettings* Game::GetSettings() const noexcept {
     return GameBase::GetSettings();
 }
 
-GameSettings& Game::GetSettings() noexcept {
+GameSettings* Game::GetSettings() noexcept {
     return GameBase::GetSettings();
 }
 

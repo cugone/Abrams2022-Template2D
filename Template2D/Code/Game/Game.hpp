@@ -22,8 +22,8 @@ public:
     void Render() const noexcept override;
     void EndFrame() noexcept override;
 
-    const GameSettings& GetSettings() const noexcept override;
-    GameSettings& GetSettings() noexcept override;
+    const GameSettings* GetSettings() const noexcept override;
+    GameSettings* GetSettings() noexcept override;
 protected:
 private:
 
